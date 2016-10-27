@@ -1,0 +1,14 @@
+login
+
+Register
+    dashboard
+        all
+        person
+
+    persons
+        list
+        detail
+
+    events
+        list
+        detail
