@@ -4,5 +4,6 @@ $(function () {
 		constrain_width: false
 	});
 	$('select').material_select();
+	$('.modal-trigger').leanModal();
 
 });

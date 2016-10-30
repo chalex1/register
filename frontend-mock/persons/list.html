@@ -20,23 +20,175 @@
 <body>
 	<ul id="settings" class="dropdown-content">
 		<li><a href="../login.html">Выход</a></li>
+		<li><a href="../settings.html">Настройки</a></li>
 	</ul>
 	<nav>
 		<div class="nav-wrapper">
-			<a href="#!" class="brand-logo"><i class="material-icons">cloud</i>мк</a>
-			<ul class="right hide-on-med-and-down" style="padding-left:30px">
+			<a  href="#!" class="brand-logo hide-on-med-and-down"><i class="material-icons"></i>Метрическая книга</a>
+			<ul class="right" style="padding-left:30px">
 				<li><a class="dropdown-button" href="#!" data-activates="settings"><i class="material-icons right">settings</i><i class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
-			<ul class="right hide-on-med-and-down">
-				<li><a href="../dashboard/all.html">Календарь</a></li>
-				<li class="active"><a href="../persons/list.html">Персоналии</a></li>
-				<li><a href="../events/list.html">События</a></li>
+			<ul class="right">
+				<li>
+					<a class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="Информационная панель" href="../dashboard/all.html"><i class="material-icons">dashboard</i></a>
+				</li>
+				<li class="active">
+					<a class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="Персоналии" href="../persons/list.html"><i class="material-icons">contacts</i></a>
+				</li>
+				<li><a class="tooltipped" data-position="bottom" data-delay="500" data-tooltip="События" href="../events/list.html"><i class="material-icons">subtitles</i></a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<main>
-
+		<div class="container">
+			<div class="card-panel">
+				<div class="section">
+					<!--filters-->
+					<div class="row">
+						<div class="input-field col s12 l5">
+							<i class="material-icons prefix">search</i>
+							<input type="text" id="searchPersonName">
+							<label for="searchPersonName">Имя</label>
+						</div>
+						<div class="input-field col s12 l3">
+							<input type="text" id="searchCityName">
+							<label for="searchCityName">Город</label>
+						</div>
+						<div class="input-field col s12 l3">
+							<input type="text" id="searchYearSince">
+							<label for="searchCityName">Год с</label>
+						</div>
+						<div class="col s6 l1">
+							<!-- Modal Trigger for Advanced search -->
+							<a data-position="bottom" data-delay="500" data-tooltip="Расширенный поиск" class="modal-trigger waves-effect waves-light btn-floating tooltipped"
+								href="#advancedSearchModal"><i class="material-icons prefix">search</i></a>
+						</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<!-- All stuff-->
+					<table class="striped">
+						<thead>
+							<tr>
+								<td>Имя</td>
+								<td>Фамилия</td>
+								<td>Город</td>
+								<td>Дата рождения</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Наталья (Светлана)</td>
+								<td>Афанасьева (Федорова)</td>
+								<td>Ржев</td>
+								<td>1980</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>Иван</td>
+								<td>Иванов</td>
+								<td>Ржев</td>
+								<td>1999</td>
+								<td>
+									<a class="waves-effect waves-light btn-flat"><i class="small material-icons">info_outline</i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="divider"></div>
+					<div class="section">
+						<div class="row">
+							<div class="col s10 l8">
+								<ul class="pagination storager">
+									<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+									<li class="active"><a href="#!">1</a></li>
+									<li class="waves-effect"><a href="#!">2</a></li>
+									<li class="waves-effect"><a href="#!">3</a></li>
+									<li class="waves-effect"><a href="#!">4</a></li>
+									<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+								</ul>
+							</div>
+							<div class="input-field col s1">
+								<select>
+									<option value="20">10</option>
+									<option value="40">30</option>
+									<option value="50">50</option>
+									</select>
+								<label>Записей</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer class="page-footer custom">
 		<div class="footer-copyright">
@@ -46,6 +198,56 @@
 			</div>
 		</div>
 	</footer>
+
+
+
+	<!-- Modal Structure -->
+	<div id="advancedSearchModal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+
+			<h4>Расширенный поиск</h4>
+			<div class="row">
+				<div class="col s4 l2">
+					<h6>Имя</h6><small class="small"> (можно использовать любое имя: в паспорте, по крещению)</small></div>
+				<div class="input-field col s8 l10">
+					<input type="text" id="searchAdvName">
+					<label for="searchAdvName">Имя</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4 l2"><h6>Фамилия</h6> <small>(можно использовать любую фамилию)</small> </div>
+				<div class="input-field col s8 l10">
+					<input type="text" id="searchAdvSName">
+					<label for="searchAdvSName">Фамилия</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4 l2"><h6>Год рождения</h6> <small>с</small></div>
+				<div class="input-field col s8 l10">
+					<input type="text" id="searchAdvByear">
+					<label for="searchAdvByear">с</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4 l2"><h6>Год рождения</h6> <small>по</small></div>
+				<div class="input-field col s8 l10">
+					<input type="text" id="searchAdvByear">
+					<label for="searchAdvByear">по</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s4 l2"><h6>Город</h6></div>
+				<div class="input-field col s8 l10">
+					<input type="text" id="searchAdvByear">
+					<label for="searchAdvByear">по</label>
+				</div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Найти</a>
+		</div>
+	</div>
 </body>
 
 </html>
