@@ -1,9 +1,9 @@
 $(function () {
 	$('.dropdown-button').dropdown({
-		belowOrigin: false, // Displays dropdown below the button
+		belowOrigin: true,
 		constrain_width: false
 	});
 	$('select').material_select();
-	$('.modal-trigger').leanModal();
+	$('.modal').modal();
 
 });

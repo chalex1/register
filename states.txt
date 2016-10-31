@@ -12,3 +12,6 @@ Register
     events
         list
         detail
+    load
+        list
+        detail
