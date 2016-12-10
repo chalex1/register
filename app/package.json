@@ -6,25 +6,29 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-	"pack": "build --dir",
-	"dist": "build --win --ia32"
+    "pack": "build --dir",
+    "dist": "build --win --ia32"
   },
   "build": {
-	  "appId": "your.id",
-	  "mac": {
-		"category": "your.app.category.type"
-	  },
-	  "win": {
-		"iconUrl": "http://eatodo.s3.amazonaws.com/icon.ico",
-		"target": "nsis"
-	  },
-	  "squirrelWindows":{
-	  "msi":true
-	  }
- },
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "iconUrl": "http://eatodo.s3.amazonaws.com/icon.ico",
+      "target": "nsis"
+    },
+    "squirrelWindows": {
+      "msi": true
+    }
+  },
   "author": "Chunin Alex",
   "license": "ISC",
   "devDependencies": {
+      "electron-builder": "^10.6.1",
     "electron": "^1.4.7"
+  },
+  "dependencies": {
+    "sqlite3": "^3.1.8"
   }
 }
