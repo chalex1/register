@@ -2,8 +2,12 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
 
+
+
+console.log('testing working with db');
 const db = require('./src/db/db-creation');
 db.init();
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

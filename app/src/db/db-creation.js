@@ -11,6 +11,8 @@ var fs = require("fs");
 var file = "register.db";
 var exists = fs.existsSync(file);
 
+console.log('File register.db exists: '+exists);
+
 /* Next we need to connect to our file/database. 
 Providing a file that does not exist will cause sqlite3 to create it for us, otherwise the file will be opened for access.*/ 
 var sqlite3 = require("sqlite3").verbose();
