@@ -21,7 +21,7 @@ var db = new sqlite3.Database(file);
   if(!exists) {
     db.run("CREATE TABLE Person (thing TEXT)");
   };
-  return 'db has creaed'
+  return 'db has created'
 };
 
 module.exports.info = "some info"
