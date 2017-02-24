@@ -1,6 +1,5 @@
 (function(){
-    var person = {};
-    person.create = function(){
+    module.exports.create = function(){
        var newbie = {
             id: undefined,
             name: "",
@@ -28,5 +27,6 @@
             education: "",
             additionalInformationAboutName: ""
        };
+       return newbie;
     };
 })()
