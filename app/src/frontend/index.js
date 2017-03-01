@@ -10,18 +10,29 @@
 // persons.init("C:/");
 // alert('ok');
 
-const registerDb = require('../db/register-db');
-const xlsparser = require('../import/xlsparser');
+// angular initialization
+(function () {
+    angular.bootstrap(document, ['application']);
+    alert('bootstrap');
+})()
 
-registerDb.getPersons({}, function (persons) {
-    alert(JSON.stringify(persons));
 
-});
 
-let parsed = xlsparser.parse('example.xlsx');
 
-registerDb.addPerson(parsed, function (added) {
-    alert(JSON.stringify(added));
-});
+//doesn't have any sense, jst for test
+
+// const registerDb = require('../db/register-db');
+// const xlsparser = require('../import/xlsparser');
+
+// registerDb.getPersons({}, function (persons) {
+//     alert(JSON.stringify(persons));
+
+// });
+
+// let parsed = xlsparser.parse('example.xlsx');
+
+// registerDb.addPerson(parsed, function (added) {
+//     alert(JSON.stringify(added));
+// });
 
 

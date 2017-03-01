@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <!--angular scripts-->
-    <script src="../lib/angular.min.js"></script>
-    <script src="../lib/angular-ui-router.min.js"></script>
 
-      <!--frontend scripts-->
-    
-    
-    <script src="index.js"></script>
-    
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+<head>
+  <meta charset="UTF-8">
+  <title>register</title>
 
-    info<script>//document.write(db.info)</script>
-  </body>
+
+</head>
+
+<body>
+  <ui-view></ui-view>
+
+  <h1>Hello World!</h1>
+  We are using node
+  <script>
+    document.write(process.versions.node)
+  </script>, Chrome
+  <script>
+    document.write(process.versions.chrome)
+  </script>, and Electron
+  <script>
+    document.write(process.versions.electron)
+  </script>. info
+
+  <script>
+    //document.write(db.info)
+  </script>
+
+
+  <!--angular scripts-->
+  <script src="../lib/angular.min.js"></script>
+
+  <script src="../lib/angular-ui-router1.min.js"></script>
+
+  <!--frontend scripts-->
+  <script src="application/application.module.js"></script>
+
+
+  <script src="application/application.controller.js"></script>
+  <script src="application/application.component.js"></script>
+  <script src="application/application.config.js"></script>
+
+  <script src="index.js"></script>
+
+
+</body>
+
 </html>
