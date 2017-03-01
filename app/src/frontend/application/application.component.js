@@ -6,7 +6,6 @@
         .component('application', {
             controller: 'applicationController',
             controllerAs: 'it',
-             //template: '<h1>Home</h1><p>Hello!!!!!!!!!!!!!!</p>'
-            templateUrl: 'src/frontend/application/application.component.html'
+            templateUrl: 'application/application.component.html'
         });
 })()

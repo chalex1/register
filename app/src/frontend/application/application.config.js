@@ -1,20 +1,40 @@
 (function () {
-    'use strict'
+  'use strict'
 
-    angular
-        .module('application')
-        .config(['$stateProvider',
-            configureStateProvider]);
+  angular
+    .module('application')
+    // .config([
+    //   '$locationProvider',
+    //   configureLocationProvider
+    // ])
 
-    function configureStateProvider($stateProvider) {
-        $stateProvider
-                  .state('application', {
-                    url: '',
-                    views: {
-                      '': {
-                        component: 'application'
-                      }
-                    }
-                  });
-    };
+    .config([
+      '$stateProvider',
+      '$urlMatcherFactoryProvider',
+      configureStateProvider
+      ]);
+
+  function configureStateProvider($stateProvider,$urlMatcherFactoryProvider) {
+     $urlMatcherFactoryProvider.strictMode(false); 
+    $stateProvider
+      .state('application', {
+        url: '',
+        views: {
+          '': {
+            component: 'application'
+          }
+        }
+      })
+      .state('application.logon', {
+        url: '/logon',
+        views: {
+          '@application': {
+            component: 'logon'
+          }
+        }
+      });
+  };
+  function configureLocationProvider($locationProvider) {
+    $locationProvider.html5Mode(true);
+  }
 })()

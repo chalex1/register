@@ -13,7 +13,6 @@
 // angular initialization
 (function () {
     angular.bootstrap(document, ['application']);
-    alert('bootstrap');
 })()
 
 

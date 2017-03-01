@@ -3,7 +3,8 @@
 
     angular
         .module('application', [
-            'ui.router'
+            'ui.router',
+            'application.logon'
         ]);
 
 
