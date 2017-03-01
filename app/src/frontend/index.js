@@ -10,8 +10,8 @@
 // persons.init("C:/");
 // alert('ok');
 
-const registerDb = require('./src/db/register-db');
-const xlsparser = require('./src/import/xlsparser');
+const registerDb = require('../db/register-db');
+const xlsparser = require('../import/xlsparser');
 
 registerDb.getPersons({}, function (persons) {
     alert(JSON.stringify(persons));
