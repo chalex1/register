@@ -8,10 +8,9 @@
     };
 
     module.exports.getPersons = function (person, callback) {
-        let personlike = person || {};
-        let result = {};
+        var personlike = person || {};
         db.find(personlike, function (err, docs){
-            callback(docs);
+            callback(docs, err);
         });
     };
 

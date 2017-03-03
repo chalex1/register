@@ -2,9 +2,14 @@
 <html>
 
 <head>
-   <!--<base href="/"/>-->
+  <!--<base href="/"/>-->
   <meta charset="UTF-8">
   <title>register</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <!--main css-->
+  <link href="main.css" rel="stylesheet">
 
 
 </head>
@@ -12,7 +17,7 @@
 <body>
   <ui-view></ui-view>
 
-  <h1>Hello World!</h1>
+  <!--<h1>Hello World!</h1>
   We are using node
   <script>
     document.write(process.versions.node)
@@ -26,15 +31,24 @@
 
   <script>
     //document.write(db.info)
-  </script>
+  </script>-->
 
 
   <!--angular scripts-->
   <script src="../lib/angular.min.js"></script>
 
+
   <script src="../lib/angular-ui-router1.min.js"></script>
 
   <!--frontend scripts-->
+  <script src="application/authorized/persons/persons.module.js"></script>
+  <script src="application/authorized/persons/persons.controller.js"></script>
+  <script src="application/authorized/persons/persons.component.js"></script>
+
+  <script src="application/authorized/authorized.module.js"></script>
+  <script src="application/authorized/authorized.controller.js"></script>
+  <script src="application/authorized/authorized.component.js"></script>
+
   <script src="application/logon/logon.module.js"></script>
   <script src="application/logon/logon.controller.js"></script>
   <script src="application/logon/logon.component.js"></script>
@@ -42,6 +56,7 @@
   <script src="application/application.module.js"></script>
   <script src="application/application.controller.js"></script>
   <script src="application/application.component.js"></script>
+  <script src="application/application.service.js"></script>
 
   <script src="application/application.config.js"></script>
 

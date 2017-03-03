@@ -13,8 +13,8 @@
         this.goLogon = function () {
             $state.go('application.logon');
         };
-        this.goRoot = function () {
-            $state.go('application');
+        this.goPage = function () {
+            $state.go('application.authorized.persons');
         }
     };
 })()

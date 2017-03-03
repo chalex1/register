@@ -4,7 +4,8 @@
     angular
         .module('application', [
             'ui.router',
-            'application.logon'
+            'application.logon',
+            'application.authorized'
         ]);
 
 
