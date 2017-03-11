@@ -20,7 +20,7 @@
 
 //doesn't have any sense, jst for test
 
-const registerDb = require('../db/register-db');
+// const registerDb = require('../db/register-db');
 // const xlsparser = require('../import/xlsparser');
 
 // registerDb.getPersons({}, function (persons) {

@@ -6,16 +6,18 @@
     const personsWrapper = require('./persons-wrapper-db');
     personsWrapper.init(db.persons);
 
-    const mocks = require('./mocks-db');
-    personsWrapper.addPerson(mocks.createPersonsMocks(), function () { })
+    const person = require('./../entities/person');
+
+    // const mocks = require('./mocks-db');
+    // personsWrapper.addPerson(mocks.createPersonsMocks(), function () { })
 
     /**
      * get all persons like personLike
      * @param  personLike - 
      * @param  callback - function(newPersons:Array)
      */
-    module.exports.getPersons = function (personLike, callback) {
-        personsWrapper.getPersons(personLike, callback);
+    module.exports.getPersonsShort = function (personLike, callback, page, quantity, sortBy) {
+        personsWrapper.getPersons(personLike, callback, person.getShortProjection(), page, quantity, sortBy);
     };
 
     module.exports.addPerson = function (person, callback) {

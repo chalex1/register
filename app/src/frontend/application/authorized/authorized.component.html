@@ -1,25 +1,25 @@
 <!--menu-->
-<nav class="navbar fixed-top">
-    <button class="btn btn-md btn-info pull-right">Выйти</button>
-    <ul class="nav nav-pills pull-right">
-        <li role="presentation"><a href="#">Информационная панель</a></li>
-        <li role="presentation" class="active"><a href="#">Персоналии</a></li>
-        <li role="presentation"><a href="#">События</a></li>
-        <li role="presentation"><a href="#">Загрузка файлов</a></li>
-    </ul>
-    <h3 >Метрическая книга</h3>
-</nav>
-<div class="container">
-
-    <div class="jumbotron">
-        <ui-view></ui-view>
+<div class="header clearfix">
+    <div class="container">
+        <nav>
+            <button id="btnLogout" class="btn btn-md btn-info pull-right">Выйти</button>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="#">Информационная панель</a></li>
+                <li role="presentation" class="active"><a href="#">Персоналии</a></li>
+                <li role="presentation"><a href="#">События</a></li>
+                <li role="presentation"><a href="#">Загрузка файлов</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Метрическая книга</h3>
     </div>
 </div>
-<!-- /container -->
-<div class="customfooter">
-    <!--<div class="container">-->
-    <footer class="footer">
-        <p>© 2017 </p>
-    </footer>
-    <!--</div>-->
+<!--/menu-->
+<div class="container">
+        <ui-view></ui-view>
 </div>
+<!-- /container -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">©2017</p>
+    </div>
+</footer>

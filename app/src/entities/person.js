@@ -1,50 +1,139 @@
 (function () {
     'use strict'
 
-    /**
-     * structure of entity
-     * Object{field:[aliases]}
-     * in aliases - all that possible, first is the most suitable. Empty array means service field
-     */
-    const structure = {
-        _id: [],
-        name: ["Имя"],
-        secondName: ["Фамилия"],
-        christianName: ["Имя при крещении"],
-        maidenName: ["Девичья фамилия"],
-        dateOfBirth: ["Дата рождения"],
-        spouse: [],
-        relations: [],
-        dateOfcatechumenate: ["Дата оглашения"],
-        dateOfBaptism: ["Дата крещения"],
-        namesDay: ["День ангела"],
-        confessor: [],
-        dateOfWedding: ["Дата венчания"],
-        address: ["Адрес"],
-        dataOfPassport: ["Паспортные данные"],
-        dateOfPassport: ["Дата выдачи паспорта"],
-        addressOfRegistration: ["Адрес прописки"],
-        innNumber: [""],
-        phoneNumberHome: ["Номер телефонный домашний"],
-        phoneNumberWork: ["Телефонный номер рабочий"],
-        cellPhoneNumber: ["Сотовый телефон"],
-        work: ["Род занятий"],
-        addressOfWork: ["Адрес работы"],
-        education: ["Образование"],
-        additionalInformationAboutName: ["Дополнительная информация об имени"]
-    }
+    const personFields = {
+        _id: {
+            service: true,
+            caption: ""
+        },
+        name: {
+            service: false,
+            caption: "Имя"
+        },
+        secondName: {
+            service: false,
+            caption: "Фамилия"
+        },
+        christianName: {
+            service: false,
+            caption: "Имя при крещении"
+        },
+        maidenName: {
+            service: false,
+            aption: "Девичья фамилия"
+        },
+        dateOfBirth: {
+            service: false,
+            caption: "Дата рождения"
+        },
+        spouse: {
+            service: false,
+            caption: ""
+        },
+        relations: {
+            service: false,
+            caption: ""
+        },
+        dateOfcatechumenate: {
+            service: false,
+            caption: "Дата оглашения"
+        },
+        dateOfBaptism: {
+            service: false,
+            caption: "Дата крещения"
+        },
+        namesDay: {
+            service: false,
+            caption: "День ангела"
+        },
+        confessor: {
+            service: false,
+            caption: ""
+        },
+        dateOfWedding: {
+            service: false,
+            caption: "Дата венчания"
+        },
+        address: {
+            service: false,
+            caption: "Адрес"
+        },
+        dataOfPassport: {
+            service: false,
+            caption: "Паспортные данные"
+        },
+        dateOfPassport: {
+            service: false,
+            caption: "Дата выдачи паспорта"
+        },
+        addressOfRegistration: {
+            service: false,
+            caption: "Адрес прописки"
+        },
+        innNumber: {
+            service: false,
+            caption: ""
+        },
+        phoneNumberHome: {
+            service: false,
+            caption: "Номер телефонный домашний"
+        },
+        phoneNumberWork: {
+            service: false,
+            caption: "Телефонный номер рабочий"
+        },
+        cellPhoneNumber: {
+            service: false,
+            caption: "Сотовый телефон"
+        },
+        work: {
+            service: false,
+            caption: "Род занятий"
+        },
+        addressOfWork: {
+            service: false,
+            caption: "Адрес работы"
+        },
+        education: {
+            service: false,
+            caption: "Образование"
+        },
+        additionalInformationAboutName: {
+            service: false,
+            caption: "Дополнительная информация об имени"
+        }
+    };
 
+    /**
+     * return associated field by caption or empty string
+     */
     module.exports.getAssociatedField = function (caption) {
-        for (let field in structure) {
-            if (structure[field].length > 0) {
-                for (let alias in structure[field]) {
-                    if (alias === caption) {
-                        return field;
-                    }
-                }
+        for (let field in personFields) {
+            if (field.caption === caption) {
+                return field;
             }
         }
         return "";
+    };
+
+    /**
+     * returns short view of fields for person
+     */
+    module.exports.getShortProjection = function (savedProjection) {
+        //TODO use user settings and savedProjection
+        var projection = {
+
+        };
+        //first 5
+        let index = 0;
+        for (let field in personFields) {
+            if (index <= 5)
+                projection[field] = 1;
+            else
+                projection[field] = 0;
+            index = index+1;
+        }
+        return projection;
     };
 
     module.exports.create = function () {

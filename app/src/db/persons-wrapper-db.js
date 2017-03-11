@@ -7,9 +7,17 @@
         db = personsdb;
     };
 
-    module.exports.getPersons = function (person, callback) {
+    module.exports.getPersons = function (person, callback, projection, page, quantity, sortBy) {
+        //sorting and pagination
+        //db.find({}).sort({ planet: 1 }).skip(1).limit(2).exec(function (err, docs) {});
+        //projection
+        //db.find({ planet: 'Mars' }, { planet: 1, system: 1, _id: 0 }, function (err, docs) {});
+
+
         var personlike = person || {};
-        db.find(personlike, function (err, docs){
+        
+        
+        db.find(personlike, projection, function (err, docs){
             callback(docs, err);
         });
     };
